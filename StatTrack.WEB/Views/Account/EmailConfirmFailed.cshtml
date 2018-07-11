@@ -1,0 +1,19 @@
+﻿@{
+	Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-danger  panel-bordered">
+			<div class="panel-heading">
+				<h6 class="panel-title">
+					Email confirmation failed
+				</h6>
+			</div>
+			<div class="panel-body">
+				Oops! Email confirmation failed! Please @Html.ActionLink("click here", "EmailConfirmRequest") to request a new confirmation email.
+			</div>
+		</div>
+	</div>
+</div>
+

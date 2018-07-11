@@ -1,0 +1,63 @@
+﻿.login-message {
+	margin: 100px auto;
+}
+
+.field-validation-error {
+	color: #f44336 !important;
+	display: block;
+	font-size: 12px;
+	margin-bottom: 7px;
+	margin-top: 7px;
+}
+
+	.field-validation-error:before  {
+		font-family: 'icomoon';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		min-width: 1em;
+		display: inline-block;
+		text-align: center;
+		font-size: 16px;
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: "\ed63";
+		margin-right: 5px;
+	}
+
+.sidebar {
+	background-color: #2D2D2D /*#263238*/;
+}
+
+.navigation > li.active > a,
+.navigation > li.active > a:hover,
+.navigation > li.active > a:focus {
+	background-color: #26A69A;
+}
+
+.header-highlight .navbar-header:not([class*=bg-]) {
+	background-color: #2D2D2D; /*#263238*/
+}
+
+.anytime-month-numeric {
+	background: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.displayNone {
+	display: none;
+}
+
+.file-styled {
+	position: relative
+}

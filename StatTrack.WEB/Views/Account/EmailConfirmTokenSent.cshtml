@@ -1,0 +1,22 @@
+﻿@model AppUserLoginVm
+
+@{
+	Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-success  panel-bordered">
+			<div class="panel-heading">
+				<h6 class="panel-title">
+					Email confirmation sent
+				</h6>
+			</div>
+			<div class="panel-body">
+				An email confirmation has been sent to your registered email address.
+				Please click the @Html.ActionLink("here", "EmailConfirmRequest") to request another verification email.
+			</div>
+		</div>
+	</div>
+</div>
+

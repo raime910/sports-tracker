@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9d0bde2ea0a149d5b0546b2f8df50f6b" Name="Diagram1">
+        <EntityTypeShape EntityType="StatTrackModel.LeaguePhase" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.League" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.LeagueSet" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.LeagueType" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.PlayerProfile" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.Sport" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.SportType" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.TeamRole" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.Team" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatTrackModel.TeamMembership" Width="1.5" PointX="8.125" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="StatTrackModel.FK_LeaguePhase_LeagueTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_LeagueSet_LeaguePhase" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_Leagues_LeagueTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_Leagues_Sports" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_LeagueSet_Leagues" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_TeamMemberships_PlayerProfiles" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_Sports_SportTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_TeamRoles_Sports" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_TeamMemberships_TeamRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="StatTrackModel.FK_TeamMemberships_Teams" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="StatTrackModel.AppClaim" Width="1.5" PointX="12.625" PointY="4" />
+        <EntityTypeShape EntityType="StatTrackModel.AppLogin" Width="1.5" PointX="12.625" PointY="10" />
+        <EntityTypeShape EntityType="StatTrackModel.AppRole" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="StatTrackModel.AppUserRole" Width="1.5" PointX="15.625" PointY="5.375" />
+        <EntityTypeShape EntityType="StatTrackModel.AppUser" Width="1.625" PointX="10.375" PointY="4.625" />
+        <AssociationConnector Association="StatTrackModel.FK_dbo_AppClaims_dbo_AppUsers_AppUser_Id" />
+        <AssociationConnector Association="StatTrackModel.FK_dbo_AppLogins_dbo_AppUsers_AppUser_Id" />
+        <AssociationConnector Association="StatTrackModel.FK_dbo_AppUserRoles_dbo_AppRoles_AppRole_Id" />
+        <AssociationConnector Association="StatTrackModel.FK_dbo_AppUserRoles_dbo_AppUsers_AppUser_Id" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

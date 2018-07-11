@@ -1,0 +1,61 @@
+﻿@model AppUserLoginVm
+
+@{
+	Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<!-- Advanced login -->
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+	<div class="panel panel-body login-form">
+		<div class="text-center">
+			<div class="icon-object border-success-400 text-success-400">
+				<i class="icon-key"></i>
+			</div>
+			<h5 class="content-group-lg">Login to your account <small class="display-block">Enter your credentials</small></h5>
+		</div>
+		@Html.StggValidationSummary()
+		<div class="form-group has-feedback has-feedback-left">
+			@Html.TextBoxFor(x => x.UserName, new { @placeholder = "Username", @class = "form-control" })
+			<div class="form-control-feedback">
+				<i class="icon-user"></i>
+			</div>
+			@Html.ValidationMessageFor(x => x.UserName)
+		</div>
+		<div class="form-group has-feedback has-feedback-left">
+			@Html.PasswordFor(x => x.Password, new { @placeholder = "Password", @class = "form-control" })
+			<div class="form-control-feedback">
+				<i class="icon-lock2"></i>
+			</div>
+			@Html.ValidationMessageFor(x => x.Password)
+		</div>
+		<div class="form-group login-options">
+			<div class="row">
+				<div class="col-sm-6">
+					<label class="checkbox-inline">
+						@Html.CheckBoxFor(x => x.RememberMe)
+						Remember me
+					</label>
+				</div>
+
+				<div class="col-sm-6 text-right">
+					@Html.ActionLink("Forgot password?", "PasswordResetRequest")
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn bg-primary btn-block btn-lg">Login <i class="icon-circle-right2 position-right"></i></button>
+		</div>
+		<div class="content-divider text-muted form-group"><span>or sign in with</span></div>
+		<ul class="list-inline form-group list-inline-condensed text-center">
+			<li><a title="Login through Steam" href="#" class="btn border-grey-600 text-slate-600 btn-flat btn-icon btn-rounded"><i class="icon-steam"></i></a></li>
+			<li><a title="Login through Google" href="#" class="btn border-success-600 text-success-600 btn-flat btn-icon btn-rounded"><i class="icon-google"></i></a></li>
+			<li><a title="Login through Facebook" href="#" class="btn border-indigo text-indigo btn-flat btn-icon btn-rounded"><i class="icon-facebook"></i></a></li>
+			<li><a title="Login through Twitter" href="#" class="btn border-primary-300 text-primary-300 btn-flat btn-icon btn-rounded"><i class="icon-twitter"></i></a></li>
+		</ul>
+		<div class="content-divider text-muted form-group"><span>Don't have an account?</span></div>
+		@Html.ActionLink("Register", "Register", null, new { @class = "btn bg-success btn-block content-group" })
+		<span class="help-block text-center no-margin">By continuing, you're confirming that you've read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Cookie Policy</a></span>
+	</div>
+}

@@ -1,0 +1,24 @@
+﻿<!-- Main navigation -->
+<div class="sidebar-category sidebar-category-visible">
+	<div class="category-content no-padding">
+		<ul class="navigation navigation-main navigation-accordion">
+			<!-- Main -->
+			<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+			<li class="active"><a href="@Url.Action("Index", "Home")"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+			<li>
+				<a href="#"><i class="icon icon-users4"></i> <span>Team Manager</span></a>
+				<ul>
+					<li>@Html.ActionLink("Create a team", "Register", "Team")</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="icon-user"></i> <span>Account Manager</span></a>
+				<ul>
+					<li>@Html.ActionLink("Profile Editor", "Editor", "Profile")</li>
+					<li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- /main navigation -->

@@ -1,0 +1,30 @@
+﻿@model EmailConfirmRequestVm
+
+@{
+	Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<!-- Advanced register -->
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+	<div class="panel panel-body login-form">
+		<div class="text-center">
+			<div class="icon-object border-warning text-warning"><i class="icon-mention"></i>
+			</div>
+			<h5 class="content-group">Email confirmation token <small class="display-block">We'll send you instructions in email</small></h5>
+		</div>
+
+		@Html.StggValidationSummary()
+
+		<div class="form-group has-feedback">
+			@Html.TextBoxFor(x => x.Email, new {@placeholder = "Email address", @class = "form-control"})
+			<div class="form-control-feedback">
+				<i class="icon-mail5"></i>
+			</div>
+		</div>
+
+		<button type="submit" class="btn bg-primary btn-block btn-lg">Send instructions <i class="icon-circle-right2 position-right"></i></button>
+	</div>
+}
+<!-- /password recovery -->

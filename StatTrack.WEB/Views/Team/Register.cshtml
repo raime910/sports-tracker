@@ -1,0 +1,159 @@
+﻿@model TeamEditorVm
+
+<div class="row">
+	<div class="col-lg-12">
+		@using (Html.BeginForm("Register", "Team", FormMethod.Post, new { enctype = "multipart/form-data" }))
+		{
+		@Html.AntiForgeryToken()
+			<div class="panel panel-flat">
+				<div class="panel-heading">
+					<h5 class="panel-title">Team Registration</h5>
+				</div>
+				<div class="panel-body">
+					@Html.StggValidationSummary()
+
+					<p class="content-group">
+						Fill out the form below then click the <b>Register team</b> button at the bottom of the page.
+						After your team has been approved, you will then be able to invite users into the team.
+						Approval process takes about a day.
+					</p>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								@Html.LabelFor(x => x.Name):
+								@Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Enter your team name" })
+								@Html.ValidationMessageFor(x => x.Name)
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								@Html.LabelFor(x => x.Code):
+								@Html.TextBoxFor(x => x.Code, new { @class = "form-control", placeholder = "Enter a short alias for your team" })
+								@Html.ValidationMessageFor(x => x.Code)
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								@Html.LabelFor(x => x.SportId):
+								@Html.DropDownListFor(x => x.SportId, (SelectList)ViewBag.SportsList, "", new { @class = "form-control select2", data_placeholder = "Select your sports" })
+								@Html.ValidationMessageFor(x => x.SportId)
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						@Html.LabelFor(x => x.Description):
+						@Html.TextAreaFor(x => x.Description, new { rows = 5, cols = 5, @class = "form-control", placeholder = "Enter your team description" })
+						@Html.ValidationMessageFor(x => x.Description)
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel panel-flat">
+				<div class="panel-heading">
+					<h5 class="panel-title">Banner and Logo</h5>
+				</div>
+				<div class="panel-body">
+					<p class="content-group">
+						<b>Logos</b> should be sized 80px x 80px while <b>Banners</b> should be sized 150px x 125px for better result. Please note that both images can only be in the following formats .png, .jpg, .jpeg, or .gif.
+					</p>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								@Html.LabelFor(x => x.LogoFile):
+								@Html.TextBoxFor(x => x.LogoFile, new { @class = "form-control file-styled", type = "file", accept = ".png,.jpeg,.jpg,.gif" })
+								@Html.ValidationMessageFor(x => x.LogoFile)
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								@Html.LabelFor(x => x.BannerFile):
+								@Html.TextBoxFor(x => x.BannerFile, new { @class = "form-control file-styled", type = "file", accept = ".png,.jpeg,.jpg,.gif" })
+								@Html.ValidationMessageFor(x => x.BannerFile)
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-flat">
+				<div class="panel-heading">
+					<h5 class="panel-title">Social Media</h5>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6">
+							@Html.LabelFor(x => x.WebsiteUrl)
+							<div class="form-group has-feedback has-feedback-left">
+								@Html.TextBoxFor(x => x.WebsiteUrl, new { @class = "form-control" })
+								<div class="form-control-feedback">
+									<i class="fa fa-link"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							@Html.LabelFor(x => x.SteamGroupUrl)
+							<div class="form-group has-feedback has-feedback-left">
+								@Html.TextBoxFor(x => x.SteamGroupUrl, new { @class = "form-control" })
+								<div class="form-control-feedback">
+									<i class="fa fa-steam"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6">
+							@Html.LabelFor(x => x.FacebookUrl)
+							<div class="form-group has-feedback has-feedback-left">
+								@Html.TextBoxFor(x => x.FacebookUrl, new { @class = "form-control" })
+								<div class="form-control-feedback">
+									<i class="fa fa-facebook"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							@Html.LabelFor(x => x.TwitterUrl)
+							<div class="form-group has-feedback has-feedback-left">
+								@Html.TextBoxFor(x => x.TwitterUrl, new { @class = "form-control" })
+								<div class="form-control-feedback">
+									<i class="fa fa-twitter"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6">
+							@Html.LabelFor(x => x.TwitchUrl)
+							<div class="form-group has-feedback has-feedback-left">
+								@Html.TextBoxFor(x => x.TwitchUrl, new { @class = "form-control" })
+								<div class="form-control-feedback">
+									<i class="fa fa-twitch"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							@Html.LabelFor(x => x.YouTubeUrl)
+							<div class="form-group has-feedback has-feedback-left">
+								@Html.TextBoxFor(x => x.YouTubeUrl, new { @class = "form-control" })
+								<div class="form-control-feedback">
+									<i class="fa fa-youtube-play"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-right">
+				<br />
+				<button type="submit" class="btn btn-primary">Register team</button>
+			</div>
+		}
+	</div>
+
+</div>

@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StatTrack.DB", "StatTrack.Db\StatTrack.DB.sqlproj", "{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lv3 Data Layer", "Lv3 Data Layer", "{5C4D0DC6-7F93-49E7-82F2-FF226E8B88FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lv2 Business Layer", "Lv2 Business Layer", "{A4B61234-D5A7-48AF-834A-1BAC5704103B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lv4 Common", "Lv4 Common", "{C76B157F-F629-4747-A0DC-234A6B0C7088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatTrack.DAL", "StatTrack.DAL\StatTrack.DAL.csproj", "{006BF5BE-3E56-4607-BDEB-BDCDFC12CB09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lv1 Presentation Layer", "Lv1 Presentation Layer", "{ABAF991B-0771-40B0-9B64-24335F3CC06D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatTrack.WEB", "StatTrack.WEB\StatTrack.WEB.csproj", "{E876E0E9-9EBF-4D2E-8539-D6C7F4C440D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatTrack.BLL", "StatTrack.BLL\StatTrack.BLL.csproj", "{732CF8FF-4C38-4B4C-9075-99F09D935EC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "CommonLib\CommonLib.csproj", "{3C8B82F5-47B9-43AE-8B48-FC59D395F40E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lv5 Test", "Lv5 Test", "{A5E4FC3E-FF6B-44B5-B54E-A1C979B0D698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatTrac.TEST", "StatTrac.TEST\StatTrac.TEST.csproj", "{3ECAD9FA-E54E-4F14-BB4A-BC272285F5E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{006BF5BE-3E56-4607-BDEB-BDCDFC12CB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006BF5BE-3E56-4607-BDEB-BDCDFC12CB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006BF5BE-3E56-4607-BDEB-BDCDFC12CB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006BF5BE-3E56-4607-BDEB-BDCDFC12CB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E876E0E9-9EBF-4D2E-8539-D6C7F4C440D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E876E0E9-9EBF-4D2E-8539-D6C7F4C440D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E876E0E9-9EBF-4D2E-8539-D6C7F4C440D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E876E0E9-9EBF-4D2E-8539-D6C7F4C440D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732CF8FF-4C38-4B4C-9075-99F09D935EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732CF8FF-4C38-4B4C-9075-99F09D935EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732CF8FF-4C38-4B4C-9075-99F09D935EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732CF8FF-4C38-4B4C-9075-99F09D935EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C8B82F5-47B9-43AE-8B48-FC59D395F40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8B82F5-47B9-43AE-8B48-FC59D395F40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8B82F5-47B9-43AE-8B48-FC59D395F40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8B82F5-47B9-43AE-8B48-FC59D395F40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECAD9FA-E54E-4F14-BB4A-BC272285F5E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECAD9FA-E54E-4F14-BB4A-BC272285F5E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECAD9FA-E54E-4F14-BB4A-BC272285F5E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECAD9FA-E54E-4F14-BB4A-BC272285F5E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6F1EA0D-4CC1-4B81-8929-B89FF70F715C} = {5C4D0DC6-7F93-49E7-82F2-FF226E8B88FD}
+		{006BF5BE-3E56-4607-BDEB-BDCDFC12CB09} = {5C4D0DC6-7F93-49E7-82F2-FF226E8B88FD}
+		{E876E0E9-9EBF-4D2E-8539-D6C7F4C440D9} = {ABAF991B-0771-40B0-9B64-24335F3CC06D}
+		{732CF8FF-4C38-4B4C-9075-99F09D935EC0} = {A4B61234-D5A7-48AF-834A-1BAC5704103B}
+		{3C8B82F5-47B9-43AE-8B48-FC59D395F40E} = {C76B157F-F629-4747-A0DC-234A6B0C7088}
+		{3ECAD9FA-E54E-4F14-BB4A-BC272285F5E7} = {A5E4FC3E-FF6B-44B5-B54E-A1C979B0D698}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ryanadriano.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StatTrack.Db\\StatTrack.DB.sqlproj
+		SccProjectTopLevelParentUniqueName1 = StatTrack.sln
+		SccProjectName1 = StatTrack.Db
+		SccLocalPath1 = StatTrack.Db
+		SccProjectUniqueName2 = StatTrack.DAL\\StatTrack.DAL.csproj
+		SccProjectTopLevelParentUniqueName2 = StatTrack.sln
+		SccProjectName2 = StatTrack.DAL
+		SccLocalPath2 = StatTrack.DAL
+		SccProjectUniqueName3 = StatTrack.WEB\\StatTrack.WEB.csproj
+		SccProjectTopLevelParentUniqueName3 = StatTrack.sln
+		SccProjectName3 = StatTrack.WEB
+		SccLocalPath3 = StatTrack.WEB
+		SccProjectUniqueName4 = StatTrack.BLL\\StatTrack.BLL.csproj
+		SccProjectTopLevelParentUniqueName4 = StatTrack.sln
+		SccProjectName4 = StatTrack.BLL
+		SccLocalPath4 = StatTrack.BLL
+		SccProjectUniqueName5 = CommonLib\\CommonLib.csproj
+		SccProjectTopLevelParentUniqueName5 = StatTrack.sln
+		SccProjectName5 = CommonLib
+		SccLocalPath5 = CommonLib
+		SccProjectUniqueName6 = StatTrac.TEST\\StatTrac.TEST.csproj
+		SccProjectTopLevelParentUniqueName6 = StatTrack.sln
+		SccProjectName6 = StatTrac.TEST
+		SccLocalPath6 = StatTrac.TEST
+	EndGlobalSection
+EndGlobal
